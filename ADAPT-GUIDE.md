@@ -69,6 +69,7 @@ dsh plugin --profile web add github:nf-shiyang/dsh-docs
 - 角色文本 `DOCS_ROLE`（单段）。换角色改此常量或 `config.text`。
 - `config.text` 空/非字符串时回退内置 `DOCS_ROLE`（务必保留）。
 - `order` 默认 61；`complete:true` 会抑制其它段，慎用。
+- **重复挂载去重**：`index.js` 用模块级 `WeakMap` 按 `ctx + 段名` 记录已注册段落，同一上下文重复 `apply` 只注册一次并记 warn；teardown 释放段名以便重载重注册。新版适配保持此行为。
 - 零运行时依赖。
 
 ## 6. 快速还原命令

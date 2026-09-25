@@ -1,7 +1,7 @@
 {
   "name": "dsh-docs",
-  "version": "0.1.0",
-  "description": "让 DeepSeek Harness 以「技术文档工程师」角色工作 — 高级开发工程师套件的独立文档插件（README / API / 变更日志产出）。",
+  "version": "0.2.0",
+  "description": "让 DeepSeek Harness 以「技术文档工程师」角色工作 — 高级开发工程师套件的独立文档插件（README / API / 变更日志 / ADR 模板）。带重复挂载去重。",
   "type": "module",
   "main": "index.js",
   "files": [
